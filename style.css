@@ -1,0 +1,87 @@
+body{
+background-color: lightyellow;
+}
+
+h1{
+color: darkblue;
+font-size: 32px;
+font-family: arial;
+text-align: center;
+}
+
+h2{
+color: brown;
+font-size: 24px;
+font-family: arial;
+}
+
+p{
+color: black;
+font-size: 18px;
+font-family: arial;
+}
+
+nav{
+background-color: brown;
+padding: 10px;
+}
+
+nav a{
+color: white;
+margin-right: 15px;
+}
+
+nav a:hover{
+color: yellow;
+}
+
+table, th, td{
+border-width: 1px;
+border-style: solid;
+border-color: brown;
+}
+
+th, td {
+padding: 10px;
+}
+
+.featured {
+box-shadow: 5px 5px 10px gray;
+padding: 10px;
+}
+
+.featured h2{
+text-shadow: 5px 5px 10px gray;
+}
+
+.image-box {
+position: relative;
+width: 400px;
+height: 300px;
+}
+
+.image-label {
+position: absolute;
+top: 20px;
+left: 20px;
+z-index: 2;
+background-color: white;
+color: brown;
+padding: 5px;
+}
+
+form{
+background-color: white;
+padding: 20px;
+width: 200px;
+border-radius: 50px;
+
+}
+form label {
+display: block;
+}
+
+form input {
+display: block;
+margin-bottom: 10px;
+}
