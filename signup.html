@@ -15,22 +15,26 @@ var phone = document.getElementById("phone").value;
 
 if(fullname == ""){
 window.alert("Please enter your fullname")
+return false;
 }
 else
 {
 
 if(mail == ""){
 window.alert("Please enter your email")
+return false;
 }
 else
 {
 if(password == ""){
 window.alert("Please enter your password")
+return false;
 }
 else
 {
 if(phone == ""){
 window.alert("Please enter your phone number")
+return false;
 }
 else
 {
@@ -42,6 +46,8 @@ window.alert("All fields entered")
 }
 }
 </script>
+<script src="bookcorner.js"></script>
+
 </head>
 <body>
 
@@ -52,10 +58,10 @@ window.alert("All fields entered")
 <a href="about.html">About Us</a>
 </nav>
 <a href="about.html">
-<img src="bookstore.jpg" alt="Bookstore image" width="400" height="300">
+<img src="bookstore.jpg" id=images alt="Bookstore image" width="400" height="300" onmouseover="changeBookImage()" onmouseout="resetBookImage()">
 </a>
 
-<form onsubmit="validatesignup()">
+<form onsubmit="return validatesignup()">
 <label for="fullname">Full name:</label>
 <input type="text" id="fullname" name="fullname"> 
 <label for="email">Email Address:</label>
