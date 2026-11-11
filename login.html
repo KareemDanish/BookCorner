@@ -4,7 +4,30 @@
 
 <title>BookCorner - login</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function validateLogin()
+{
+var mail = document.getElementById("email").value;
+var password = document.getElementById("password").value;
 
+
+if(mail == ""){
+window.alert("Please enter your email")
+}
+else
+{
+
+if(password == ""){
+window.alert("Please enter your password")
+}
+else
+{
+window.alert("Email and password entered")
+}
+}
+
+}
+</script>
 </head>
 <body>
 
@@ -16,7 +39,7 @@
 <a href="about.html">About Us</a>
 </nav>
 
-<form>
+<form onsubmit="validateLogin()">
 <label for="email">Email Address:</label>
 <input type="email" id="email" name="email"> 
 <label for="password">Password:</label>
@@ -24,7 +47,6 @@
 <input type="submit" value="Login">
 <input type="reset" value="Clear">
 </form>
-
 <a href="about.html">
 <img src="bookstore.jpg"  alt="Bookstore image" width="400" height="300">
 </a>

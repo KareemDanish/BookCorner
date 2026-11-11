@@ -4,7 +4,33 @@
 
 <title>BookCorner</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function changedescription(){
+document.getElementById("description").innerHTML ="Welcome to BookCorner, a place for readers to discover new books and explore different categories. Whether you enjoy fiction, science, history, technology, or business, BookCorner helps you find interesting books and compare their prices easily.";
+}
+function highlightBook()
+{
+document.getElementById("featuredTitle").style.color = "red";
+}
+function resetBookColor()
+{
+document.getElementById("featuredTitle").style.color = "black";
+}
+function addReadingTip()
+{
+var tip = document.createTextNode("Reading helps you learn new things. ");
+document.getElementById("readingTips").appendChild(tip);
+}
+function changeBookImage()
+{
+document.getElementById("images").src ="books.jpg";
+}
+function resetBookImage()
+{
+document.getElementById("images").src ="bookstore.jpg";
+}
 
+</script>
 </head>
 <body>
 
@@ -12,7 +38,7 @@
 
 <div class="image-box">
 <a href="about.html">
-<img src="bookstore.jpg" alt="Bookstore image" width="400" height="300">
+<img src="bookstore.jpg" id=images alt="Bookstore image" width="400" height="300" onmouseover="changeBookImage()" onmouseout="resetBookImage()">
 <span class="image-label">BookCorner</span>
 </a>
 </div>
@@ -23,8 +49,8 @@
 <a href="signup.html">Sign Up</a>
 </nav>
 
-<p>BookCorner is an online bookstore where visitors can explore different types of books and discover interesting titles.</p>
-
+<p id="description">BookCorner is an online bookstore where visitors can explore different types of books and discover interesting titles.</p>
+<button onclick="changedescription()">Discover More</button>
 <a href="#books">View Available Books</a>
 <a href="#categories">View Book Categories</a>
 
@@ -70,8 +96,13 @@
 
 <article class="featured">
 <h2>Featured Book</h2>
-<h3>The Lost Island</h3>
+<h3 id="featuredTitle" onmouseover="highlightBook()" onmouseout = "resetBookColor()">The Lost Island</h3>
 <p>An exciting fiction story about an adventure on a mysterious island.</p>
+
+<button onclick="highlightBook()">Highlight Featured Book.</button>
+<h2>Reading Tips</h2>
+<div id="readingTips"></div>
+<button onclick="addReadingTip()">tips</button>
 </article>
 
 

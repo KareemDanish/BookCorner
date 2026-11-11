@@ -4,7 +4,44 @@
 
 <title>BookCorner - Sign up</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script>
 
+function validatesignup()
+{
+var fullname = document.getElementById("fullname").value;
+var mail = document.getElementById("email").value;
+var password = document.getElementById("password").value;
+var phone = document.getElementById("phone").value;
+
+if(fullname == ""){
+window.alert("Please enter your fullname")
+}
+else
+{
+
+if(mail == ""){
+window.alert("Please enter your email")
+}
+else
+{
+if(password == ""){
+window.alert("Please enter your password")
+}
+else
+{
+if(phone == ""){
+window.alert("Please enter your phone number")
+}
+else
+{
+window.alert("All fields entered")
+
+}
+}
+}
+}
+}
+</script>
 </head>
 <body>
 
@@ -18,7 +55,7 @@
 <img src="bookstore.jpg" alt="Bookstore image" width="400" height="300">
 </a>
 
-<form>
+<form onsubmit="validatesignup()">
 <label for="fullname">Full name:</label>
 <input type="text" id="fullname" name="fullname"> 
 <label for="email">Email Address:</label>
