@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>BookCorner</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function changedescription(){
+document.getElementById("description").innerHTML ="Welcome to BookCorner, a place for readers to discover new books and explore different categories. Whether you enjoy fiction, science, history, technology, or business, BookCorner helps you find interesting books and compare their prices easily.";
+}
+function highlightBook()
+{
+document.getElementById("featuredTitle").style.color = "red";
+}
+function resetBookColor()
+{
+document.getElementById("featuredTitle").style.color = "black";
+}
+function addReadingTip()
+{
+var tip = document.createTextNode("Reading helps you learn new things. ");
+document.getElementById("readingTips").appendChild(tip);
+}
+</script>
+<script src="bookcorner.js"></script>
+</head>
+<body>
+
+<h1>Welcome to BookCorner</h1>
+
+<div class="image-box">
+<a href="about.html">
+<img src="bookstore.jpg" id=images alt="Bookstore image" width="400" height="300" onmouseover="changeBookImage()" onmouseout="resetBookImage()">
+<span class="image-label">BookCorner</span>
+</a>
+</div>
+
+<nav>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Log in</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="/Books">Books</a>
+    <a href="/Books/SearchForm">Search</a>
+    <a href="/Home/SetCookies?cookieName=FavoriteCategory&amp;cookieValue=Technology">Save Favorite Category</a>
+    <a href="/Home/GetCookies">View Favorite Category</a>
+    <a href="/Home/SetSession?key=SelectedBook&amp;value=DatabaseSystems">Select Book</a>
+    <a href="/Home/GetSession">View Selected Book</a>
+</nav>
+
+<p id="description">BookCorner is an online bookstore where visitors can explore different types of books and discover interesting titles.</p>
+<button onclick="changedescription()">Discover More</button>
+<a href="#books">View Available Books</a>
+<a href="#categories">View Book Categories</a>
+
+<h2 id="categories">Book Categories</h2>
+
+<ul>
+<li>Fiction</li>
+<li>Technology</li>
+<li>Science</li>
+<li>History</li>
+<li>Business</li>
+</ul>
+
+<h2 id="books">Available Books</h2>
+
+
+
+<table>
+<tr>
+<th>Book Title</th>
+<th>Category</th>
+<th>Price (SAR)</th>
+</tr>
+
+<tr>
+<td>The Lost Island</td>
+<td>Fiction</td>
+<td>45</td>
+</tr>
+
+<tr>
+<td>Learning Computers</td>
+<td>Technology</td>
+<td>60</td>
+</tr>
+
+<tr>
+<td>World History</td>
+<td>History</td>
+<td>50</td>
+</tr>
+</table>
+
+<article class="featured">
+<h2>Featured Book</h2>
+<h3 id="featuredTitle" onmouseover="highlightBook()" onmouseout = "resetBookColor()">The Lost Island</h3>
+<p>An exciting fiction story about an adventure on a mysterious island.</p>
+
+<button onclick="highlightBook()">Highlight Featured Book.</button>
+<h2>Reading Tips</h2>
+<div id="readingTips"></div>
+<button onclick="addReadingTip()">tips</button>
+</article>
+
+
+</body>
+</html>
